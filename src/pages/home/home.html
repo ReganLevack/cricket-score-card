@@ -1,18 +1,10 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Hello</ion-title>
+    <ion-title>Cricket Scorecard</ion-title>
   </ion-navbar>
 </ion-header>
-
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+<ion-content padding align="center">
+  <ion-img width="300" height="240" src="../../assets/imgs/scoreboard.jpg"></ion-img>
+  <button ion-button block (click)="login()">Login</button>
+  <button ion-button block (click)="register()">Register</button>
 </ion-content>

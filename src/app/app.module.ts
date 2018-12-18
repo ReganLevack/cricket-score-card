@@ -5,19 +5,19 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
-import { AdminPage } from '../pages/admin/admin';
+import { LoginPage } from '../pages/login/login';
+import { RegisterPage } from '../pages/register/register';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { AdminDetailPage } from '../pages/admin-detail/admin-detail';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ListPage,
-    AdminPage,
-    AdminDetailPage
+    LoginPage,
+    RegisterPage
   ],
   imports: [
     BrowserModule,
@@ -28,8 +28,8 @@ import { AdminDetailPage } from '../pages/admin-detail/admin-detail';
     MyApp,
     HomePage,
     ListPage,
-    AdminPage,
-    AdminDetailPage
+    LoginPage,
+    RegisterPage
   ],
   providers: [
     StatusBar,
