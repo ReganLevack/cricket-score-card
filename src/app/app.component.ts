@@ -8,6 +8,7 @@ import { LeaguesPage } from '../pages/leagues/leagues';
 import { ClubsPage } from '../pages/clubs/clubs';
 import { SeasonsPage } from '../pages/seasons/seasons';
 import { LandingPage } from '../pages/landing/landing';
+import { LoginPage } from '../pages/login/login';
 
 @Component({
   templateUrl: 'app.html'
@@ -28,7 +29,7 @@ export class MyApp {
       { title: 'Seasons', component: SeasonsPage },
       { title: 'Leagues', component: LeaguesPage },
       { title: 'Clubs', component: ClubsPage },
-      { title: 'Logout', component: HomePage }
+      { title: 'Logout', component: LoginPage }
     ];
 
   }

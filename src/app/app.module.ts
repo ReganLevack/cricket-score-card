@@ -16,6 +16,8 @@ import { LandingPage } from '../pages/landing/landing';
 import { CricketScorerApi } from '../providers/cricket-scorer-api/cricket-scorer-api';
 import { SeasonsPage } from '../pages/seasons/seasons';
 import { HttpModule } from '@angular/http';
+import { RegisterPage } from '../pages/register/register';
+import { LoginPage } from '../pages/login/login';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { HttpModule } from '@angular/http';
     LeaguesPage,
     ClubsPage,
     LandingPage,
-    SeasonsPage
+    SeasonsPage,
+    RegisterPage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -44,7 +48,9 @@ import { HttpModule } from '@angular/http';
     LeaguesPage,
     ClubsPage,
     LandingPage,
-    SeasonsPage
+    SeasonsPage,
+    RegisterPage,
+    LoginPage
   ],
   providers: [
     StatusBar,
