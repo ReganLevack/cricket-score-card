@@ -10,6 +10,8 @@ import { AdminPage } from '../pages/admin/admin';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AdminDetailPage } from '../pages/admin-detail/admin-detail';
+import { LeaguesPage } from '../pages/leagues/leagues';
+import { ClubsPage } from '../pages/clubs/clubs';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { AdminDetailPage } from '../pages/admin-detail/admin-detail';
     HomePage,
     ListPage,
     AdminPage,
-    AdminDetailPage
+    AdminDetailPage,
+    LeaguesPage,
+    ClubsPage
   ],
   imports: [
     BrowserModule,
@@ -29,7 +33,9 @@ import { AdminDetailPage } from '../pages/admin-detail/admin-detail';
     HomePage,
     ListPage,
     AdminPage,
-    AdminDetailPage
+    AdminDetailPage,
+    LeaguesPage,
+    ClubsPage
   ],
   providers: [
     StatusBar,
