@@ -12,6 +12,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { AdminDetailPage } from '../pages/admin-detail/admin-detail';
 import { LeaguesPage } from '../pages/leagues/leagues';
 import { ClubsPage } from '../pages/clubs/clubs';
+import { LandingPage } from '../pages/landing/landing';
+import { CricketScorerApi } from '../providers/cricket-scorer-api/cricket-scorer-api';
+import { SeasonsPage } from '../pages/seasons/seasons';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -21,11 +25,14 @@ import { ClubsPage } from '../pages/clubs/clubs';
     AdminPage,
     AdminDetailPage,
     LeaguesPage,
-    ClubsPage
+    ClubsPage,
+    LandingPage,
+    SeasonsPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -35,12 +42,15 @@ import { ClubsPage } from '../pages/clubs/clubs';
     AdminPage,
     AdminDetailPage,
     LeaguesPage,
-    ClubsPage
+    ClubsPage,
+    LandingPage,
+    SeasonsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    CricketScorerApi
   ]
 })
 export class AppModule {}

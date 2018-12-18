@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the LandingPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { NavController, NavParams, LoadingController } from 'ionic-angular';
+import { CricketScorerApi } from '../../providers/cricket-scorer-api/cricket-scorer-api';
 
 @Component({
   selector: 'page-landing',
@@ -14,11 +8,27 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class LandingPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  public topLeagues: any;
+  
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              private cricketScorerApi: CricketScorerApi,
+              public loadingController: LoadingController) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LandingPage');
-  }
+    console.log("hello");
+    let loader = this.loadingController.create({
+      content: 'Getting seasons...'
+     // spinner: 'dots'
+   });
+
+   loader.present().then(() => { 
+   this.cricketScorerApi.getSeasons().then(data => {
+     this.topLeagues = data;
+     loader.dismiss();
+   });
+ });
+}
 
 }
