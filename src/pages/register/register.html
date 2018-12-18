@@ -1,0 +1,64 @@
+<!--
+  Generated template for the RegisterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Cricket Scorecard</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+    <form #f="ngForm" (ngSubmit)="register(f.value)">
+        <ion-item>
+          <ion-label color="primary" stacked>Username</ion-label>
+          <ion-input type="text" placeholder="Enter Username" name="username" [(ngModel)]="username"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label color="primary" stacked>Password</ion-label>
+          <ion-input type="password" placeholder="Enter Password" name="password" [(ngModel)]="password"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary" stacked>Confirm Password</ion-label>
+            <ion-input type="password" placeholder="Confirm Password" name="confirmpassword" [(ngModel)]="confirmpassword"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary" stacked>First Name</ion-label>
+            <ion-input type="text" placeholder="Enter Firstname" name="firstname" [(ngModel)]="firstname"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary" stacked>Surname</ion-label>
+            <ion-input type="text" placeholder="Enter Surname" name="surname" [(ngModel)]="surname"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary" stacked>Email Address</ion-label>
+            <ion-input type="text" placeholder="Enter Email" name="emailaddress" [(ngModel)]="emailaddress"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary" stacked>Affiliation</ion-label>
+            <ion-select name="affiliation" [(ngModel)]="affiliation">
+                <ion-option value="1">Western Province Cricket Association</ion-option>
+                <ion-option value="2">Gauteng Cricket Association</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary" stacked>User Type</ion-label>
+            <ion-select name="usertype" [(ngModel)]="usertype">
+                <ion-option value="2">Club Captain</ion-option>
+                <ion-option value="3">Secretary</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary" stacked>Club</ion-label>
+            <ion-select name="club" [(ngModel)]="club">
+                <ion-option value="1">Strandfontein Cricket Club</ion-option>
+            </ion-select>
+        </ion-item>
+        <br/>
+        <button ion-button block type="submit">Register</button>
+      </form>
+</ion-content>
