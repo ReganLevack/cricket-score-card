@@ -14,6 +14,7 @@ import { LeaguesPage } from '../pages/leagues/leagues';
 import { ClubsPage } from '../pages/clubs/clubs';
 import { LandingPage } from '../pages/landing/landing';
 import { CricketScorerApi } from '../providers/cricket-scorer-api/cricket-scorer-api';
+import { SecurityApi } from '../providers/security-api/security-api';
 import { SeasonsPage } from '../pages/seasons/seasons';
 import { HttpModule } from '@angular/http';
 import { RegisterPage } from '../pages/register/register';
@@ -56,7 +57,8 @@ import { LoginPage } from '../pages/login/login';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    CricketScorerApi
+    CricketScorerApi,
+    SecurityApi
   ]
 })
 export class AppModule {}
