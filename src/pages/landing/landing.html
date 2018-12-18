@@ -1,26 +1,13 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Landing</ion-title>
+    <ion-title>Seasons</ion-title>
   </ion-navbar>
 
-</ion-header>
+</ion-header> 
 
-
-<ion-content padding>
-
-<ion-card>
-  <ion-card-header>
-    Seasons
-  </ion-card-header>
-  <ion-card-content>
-      <p>Select a season.</p>
-      <p>2018</p> 
-  </ion-card-content>
-</ion-card>
-
-  <ion-list>
-      <button *ngFor="let league of topLeagues" ion-item> {{league.name}}</button>
-  </ion-list>
-
-</ion-content>
+  <ion-content>
+         <ion-list>
+             <button *ngFor="let season of topSeasons" ion-item (click)="goToSeasonDetails($event, season)"> Season: {{season.name}}</button>
+         </ion-list> 
+    </ion-content>

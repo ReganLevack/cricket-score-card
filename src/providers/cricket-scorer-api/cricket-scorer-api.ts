@@ -7,6 +7,7 @@ import 'rxjs/add/operator/map';
 export class CricketScorerApi {
 
   private baseUrl = "https://cricket-score-card-za.firebaseio.com";
+  private currentSeason: any = {};
 
   constructor(public http: Http) {
    
@@ -18,4 +19,15 @@ export class CricketScorerApi {
     })
   }
 
+  getSeasonDetails(seasonId){
+    return this.http.get(`${this.baseUrl}/seasondetail/${seasonId}.json`)
+    .map(response => { this.currentSeason = response.json();
+     return this.currentSeason;
+   });
+  }
+
+  
+  getCurrentSeason(){
+    return this.currentSeason;
+  }
 }

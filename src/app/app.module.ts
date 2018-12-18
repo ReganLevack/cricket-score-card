@@ -18,6 +18,7 @@ import { SeasonsPage } from '../pages/seasons/seasons';
 import { HttpModule } from '@angular/http';
 import { RegisterPage } from '../pages/register/register';
 import { LoginPage } from '../pages/login/login';
+import { SeasonDetailPage } from '../pages/season-detail/season-detail';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { LoginPage } from '../pages/login/login';
     LandingPage,
     SeasonsPage,
     RegisterPage,
-    LoginPage
+    LoginPage,
+    SeasonDetailPage
   ],
   imports: [
     BrowserModule,
@@ -50,7 +52,8 @@ import { LoginPage } from '../pages/login/login';
     LandingPage,
     SeasonsPage,
     RegisterPage,
-    LoginPage
+    LoginPage,
+    SeasonDetailPage
   ],
   providers: [
     StatusBar,
