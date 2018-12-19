@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { CricketScorerApi } from '../../providers/cricket-scorer-api/cricket-scorer-api';
+import { LeaguesPage } from '../leagues/leagues';
+import { ClubsPage } from '../clubs/clubs';
 
 @Component({
   selector: 'page-season-detail',
@@ -9,6 +11,8 @@ import { CricketScorerApi } from '../../providers/cricket-scorer-api/cricket-sco
 export class SeasonDetailPage {
 
   public season: any = {};
+  public leaguesTab = LeaguesPage;
+  public clubsTab = ClubsPage;
 
   constructor(public navCtrl: NavController, 
               public navParams: NavParams,
@@ -19,7 +23,7 @@ export class SeasonDetailPage {
   }
 
   ionViewDidLoad() {
-      this.cricketScorerApi.getSeasonDetails(this.season.seasonId);
+     let item = this.cricketScorerApi.getSeasonDetails(this.season.seasonId);
   }
 
 }
